@@ -1,0 +1,161 @@
+<title>BROWNIE</title>
+  <header class="cabecalho">
+  <div class="container">
+
+    <div class="logo">
+             <a href="index.html">
+            <img src="./assents/logo.png" alt="Logo Doce Tentação"> 
+             </a>
+        </div>
+    <nav class="menu">
+      <ul>
+        <li><a href="QuemSomos.html">QUEM SOMOS</a></li>
+        <li><a href="Contatos.html">CONTATE-NOS</a></li>
+        <li><a href="MinhaConta.html">MINHA CONTA</a></li>
+        <li><a href="index.html">INÍCIO</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<section class="brownies-grid">
+  <div class="brownie-card">
+    <img src="brownie1.jpg" alt="Brownie Tradicional">
+    <h3>Brownie Tradicional</h3>
+    <button>Eu quero</button>
+  </div>
+
+  <div class="brownie-card">
+    <img src="brownie2.jpg" alt="Brownie com Nozes">
+    <h3>Brownie com Nozes</h3>
+    <button>Eu quero</button>
+  </div>
+
+  <div class="brownie-card">
+    <img src="brownie3.jpg" alt="Brownie com Nutella">
+    <h3>Brownie com Nutella</h3>
+    <button>Eu quero</button>
+  </div>
+
+  <div class="brownie-card">
+    <img src="brownie4.jpg" alt="Chocolate Branco">
+    <h3>Chocolate Branco</h3>
+    <button>Eu quero</button>
+  </div>
+
+  <div class="brownie-card">
+    <img src="brownie5.jpg" alt="Brownie com Morango">
+    <h3>Brownie com Morango</h3>
+    <button>Eu quero</button>
+  </div>
+
+  <div class="brownie-card">
+    <img src="brownie6.jpg" alt="Brownie com Café">
+    <h3>Brownie com Café</h3>
+    <button>Eu quero</button>
+  </div>
+</section>
+
+
+<style>
+
+.body {
+    font-family: Marcellus SC;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+     
+}
+.cabecalho {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.cabecalho .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 90px;
+  width: auto;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #4b0000;
+  font-weight: bold;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #8b0000;
+}
+
+.contato-section {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.brownies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-content: center;
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.brownie-card {
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: #fff;
+}
+
+.brownie-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.brownie-card h3 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.brownie-card button {
+  padding: 8px 16px;
+  border: 1px solid #000;
+  background: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.brownie-card:hover {
+  transform: scale(1.03);
+}
+
+
+</style>
