@@ -6,13 +6,27 @@ body {
 }
 
 header {
-    background-color: #5D3535;
+    background-color: #ffffff;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
     flex-wrap: wrap;
+}
+
+.banner1 {
+    background-color: #5D3535;
+    padding: 5rem 2rem;
+    color: #5D3535;
+    align-items: center;
+    
+}
+
+.corpo_anuncios {
+    align-items: center;
+    margin-left: 500px;
+    margin-right: 500px;
 }
 
 .logo img {
@@ -22,23 +36,25 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap:  4rem;
     padding: 0;
     margin: 0;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: rgb(63, 42, 42);
     font-weight: bold;
 }
 
 .produtos-destaque {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 10rem;
     background-color: #ffffff;
     padding: 2rem;
+     transition: transform 0.3s ease, background-color 0.3s ease;
+     cursor: pointer;
 }
 
 .produto {
@@ -49,6 +65,7 @@ nav ul li a {
     width: 200px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     color: #FFFF;
+    cursor: pointer;
 }
 
 .produto img {
@@ -64,6 +81,8 @@ nav ul li a {
     padding: 0.5rem 1rem;
     border-radius: 10px;
     cursor: pointer;
+    transform: scale(1.2)
+
 }
 
 .carousel-controls {
