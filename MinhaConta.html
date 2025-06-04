@@ -20,8 +20,52 @@
     </nav>
   </div>
 </header>
+</head>
+<body>
+  <h1>MINHA CONTA</h1>
+
+  <div class="container">
+    <div class="form-box">
+      <h2>ENTRAR</h2>
+      <form>
+        <label for="username">Nome de usuário ou e-mail </label>
+        <input type="text" id="username" required>
+
+        <label for="password">Senha </label>
+        <input type="password" id="password" required>
+
+        <div class="checkbox-label">
+          <input type="checkbox" id="remember">
+          <label for="remember">Lembre-me</label>
+        </div>
+
+        <button type="submit">Acessar</button>
+        <p><a href="#">Perdeu sua senha?</a></p>
+      </form>
+    </div>
+
+    <div class="form-box">
+      <h2>CADASTRE-SE</h2>
+      <form>
+        <label for="email">Endereço de e-mail </label>
+        <input type="email" id="email" required>
+
+        <p>Um link para definir uma nova senha será enviado para seu endereço de e-mail.</p>
+
+        <p class="privacy">
+          Seus dados pessoais serão usados para aprimorar a sua experiência em todo este site,
+          para gerenciar o acesso a sua conta e para outros propósitos, como descritos em nossa
+          <a href="#">política de privacidade</a>.
+        </p>
+
+        <button type="submit">Cadastre-se</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+  
   <style>
-    
 .body {
       font-family: Marcellus SC;
       margin: 0;
@@ -67,10 +111,9 @@
 }
 
 .menu li a:hover {
-  color: #8b0000;
+  color: #BF7D7D;
 }
-
-
+ 
     h1 {
       text-align: center;
       padding-top: 30px;
@@ -146,7 +189,7 @@
     }
 
     button:hover {
-      background-color: #331015;
+      background-color: #463436;
     }
 
     .privacy {
@@ -159,6 +202,7 @@
     }
 
     @media (max-width: 800px) {
+      
       .container {
         flex-direction: column;
         align-items: center;
@@ -167,51 +211,4 @@
       .form-box {
         width: 90%;
       }
-    }
-  </style>
-</head>
-<body>
-  <h1>MINHA CONTA</h1>
-
-  <div class="container">
-    <!-- Login -->
-    <div class="form-box">
-      <h2>ENTRAR</h2>
-      <form>
-        <label for="username">Nome de usuário ou e-mail </label>
-        <input type="text" id="username" required>
-
-        <label for="password">Senha </label>
-        <input type="password" id="password" required>
-
-        <div class="checkbox-label">
-          <input type="checkbox" id="remember">
-          <label for="remember">Lembre-me</label>
-        </div>
-
-        <button type="submit">Acessar</button>
-        <p><a href="#">Perdeu sua senha?</a></p>
-      </form>
-    </div>
-
-    <!-- Cadastro -->
-    <div class="form-box">
-      <h2>CADASTRE-SE</h2>
-      <form>
-        <label for="email">Endereço de e-mail </label>
-        <input type="email" id="email" required>
-
-        <p>Um link para definir uma nova senha será enviado para seu endereço de e-mail.</p>
-
-        <p class="privacy">
-          Seus dados pessoais serão usados para aprimorar a sua experiência em todo este site,
-          para gerenciar o acesso a sua conta e para outros propósitos, como descritos em nossa
-          <a href="#">política de privacidade</a>.
-        </p>
-
-        <button type="submit">Cadastre-se</button>
-      </form>
-    </div>
-  </div>
-</body>
-</html>
+    
