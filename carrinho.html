@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho | Doceria</title>
+  </head>
+<body>
+    <header class="cabecalho">
+  <div class="container">
+
+    <div class="logo">
+             <a href="index.html">
+            <img src="./assents/logo.png" alt="Logo Doce Tentação"> 
+             </a>
+        </div>
+
+    <nav class="menu">
+      <ul>
+         <li><a href="QuemSomos.html">QUEM SOMOS</a></li>
+        <li><a href="Contatos.html">CONTATE-NOS</a></li>
+        <li><a href="MinhaConta.html">MINHA CONTA</a></li>
+        <li><a href="carrinho.html">CARRINHO </a></li>
+       <li><a href="index.html">INÍCIO</a></li>
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <div class="carrinho">
+    <h1>CARRINHO</h1>
+
+    <div class="produto">
+      <img src="brownie.jpg" alt="Brownie Tal">
+      <div class="produto-info">
+        <h2>Brownie Tal</h2>
+      </div>
+      <div class="produto-valores">
+        <span>R$00,00</span>
+        <input type="number" placeholder="0">
+        <span>R$00,00</span>
+      </div>
+    </div>
+
+    <div class="botoes">
+      <input type="text" placeholder="Cod cupom">
+      <button>Aplicar Cupom</button>
+      <button class="btn-marrom">Atualizar no Carrinho</button>
+      <button>Data da Entrega</button>
+      <button>Período</button>
+    </div>
+
+  
+    <div class="total">
+      <h2>Total no carrinho</h2>
+      <div class="box-total">
+        <p><strong>SUBTOTAL</strong> R$00,00</p>
+        <p><strong>TIPO DE ENTREGA</strong><br>
+          RETIRADA NO LOCAL<br>
+          ENTREGA EM SÃO PAULO
+        </p>
+        <p><strong>TOTAL R$00,00</strong></p>
+        <div class="finalizar">
+          <button class="btn-finalizar">FINALIZAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+  <style>
+    .cabecalho {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.cabecalho .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 90px;
+  width: auto;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #4b0000;
+  font-weight: bold;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #BF7D7D;
+}
+ 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Georgia', serif;
+    }
+
+    body {
+      background: #fff;
+      padding: 2rem;
+      color: #2c1a1a;
+    }
+
+    h1 {
+      text-align: center;
+      padding-top: 30px;
+      font-size: 32px;
+    }
+
+    .carrinho {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .produto {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #ccc;
+      padding: 1rem 0;
+    }
+
+    .produto img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .produto-info {
+      flex: 1;
+      margin-left: 1rem;
+    }
+
+    .produto-info h2 {
+      font-size: 1rem;
+      color: #5e2d2d;
+    }
+
+    .produto-valores {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .produto-valores input {
+      width: 60px;
+      text-align: center;
+      padding: 0.3rem;
+    }
+
+    .botoes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      justify-content: center;
+    }
+
+    button, input[type="text"] {
+      padding: 0.7rem 1.2rem;
+      border: 1px solid #999;
+      background: white;
+      color: #2c1a1a;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .btn-marrom {
+      background: #7b5a56;
+      color: white;
+      border: none;
+    }
+
+    .total {
+      margin-top: 3rem;
+      font-size: 1.2rem;
+    }
+
+    .box-total {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    .box-total p {
+      margin: 0.5rem 0;
+    }
+
+    .finalizar {
+      margin-top: 1rem;
+      text-align: right;
+    }
+
+    .btn-finalizar {
+      background: #5c3c38;
+      color: white;
+      padding: 0.7rem 2rem;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      .produto {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .produto-valores {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .finalizar {
+        text-align: center;
+      }
+    }
+  </style>
