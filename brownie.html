@@ -1,74 +1,97 @@
 <title>BROWNIE</title>
-  <header class="cabecalho">
+<header class="cabecalho">
   <div class="container">
-
     <div class="logo">
-             <a href="index.html">
-            <img src="./assents/logo.png" alt="Logo Doce Tentação"> 
-            <link rel="stylesheet" href="brownie.css">
-             </a>
-        </div>
+      <a href="index.html">
+        <img src="./assents/logo.png" alt="Logo Doce Tentação">
+        <link rel="stylesheet" href="brownie.css">
+      </a>
+    </div>
     <nav class="menu">
       <ul>
-         <li><a href="QuemSomos.html">QUEM SOMOS</a></li>
+        <li><a href="QuemSomos.html">QUEM SOMOS</a></li>
         <li><a href="Contatos.html">CONTATE-NOS</a></li>
         <li><a href="MinhaConta.html">MINHA CONTA</a></li>
-        <li><a href="carrinho.html">CARRINHO </a></li>
-       <li><a href="index.html">INÍCIO</a></li>
+        <li><a href="carrinho.html">CARRINHO</a></li>
+        <li><a href="index.html">INÍCIO</a></li>
       </ul>
     </nav>
   </div>
 </header>
+
 <h1>BROWNIES</h1>
+
 <section class="brownies-grid">
+
   <div class="brownie-card">
     <img src="./assents/brownie1.jpeg" alt="Brownie Tradicional">
     <h3>Brownie Tradicional</h3>
-    <button>Eu quero</button>
+    <div class="informacoes">
+      <p><strong>Ingredientes:</strong> Chocolate, Açúcar, Manteiga, Ovos, Farinha de Trigo</p>
+    </div>
+    <button class="adicionar" data-id="1" data-nome="Brownie Tradicional" data-preco="20" data-imagem="brownie1.jpeg">Adicionar ao carrinho</button>
   </div>
 
-  <div class="brownie-card">
-    <img src="./assents/brownie2.jpeg" alt="Brownie com Nozes">
-    <h3>Brownie com Nozes</h3>
-    <button>Eu quero</button>
-  </div>
 
   <div class="brownie-card">
-    <img src="./assents/brownie1.jpeg" alt="Brownie com Nutella">
-    <h3>Brownie com Nutella</h3>
-    <button>Eu quero</button>
+    <img src="assents/brownienozes.jfif" alt="Brownie com Nozes">
+    <h3>Nozes</h3>
+    <div class="informacoes">
+      <p><strong>Ingredientes:</strong> Chocolate, Açúcar, Manteiga, Ovos, Farinha de Trigo, Nozes</p>
+    </div>
+    <button class="adicionar" data-id="2" data-nome="Brownie com Nozes" data-preco="22" data-imagem="brownie2.jpeg">Adicionar ao carrinho</button>
   </div>
 
-  <div class="brownie-card">
-    <img src="./assents/brownie2.jpeg" alt="Chocolate Branco">
-    <h3>Chocolate Branco</h3>
-    <button>Eu quero</button>
-  </div>
 
   <div class="brownie-card">
-    <img src="./assents/brownie1.jpeg" alt="Brownie com Morango">
-    <h3>Brownie com Morango</h3>
-    <button>Eu quero</button>
+    <img src="assents/browniemorango.jfif" alt="Brownie com Morango">
+    <h3>Morango</h3>
+    <div class="informacoes">
+      <p><strong>Ingredientes:</strong> Chocolate, Açúcar, Manteiga, Ovos, Farinha de Trigo, Morango</p>
+    </div>
+    <button class="adicionar" data-id="3" data-nome="Brownie com Morango" data-preco="25" data-imagem="brownie3.jpeg">Adicionar ao carrinho</button>
   </div>
 
+  
   <div class="brownie-card">
-    <img src="./assents/brownie2.jpeg" alt="Brownie com Café">
-    <h3>Brownie com Café</h3>
-    <button>Eu quero</button>
+    <img src="assents/brownienutella.jfif" alt="Brownie de Nutella">
+    <h3>Nutella</h3>
+    <div class="informacoes">
+      <p><strong>Ingredientes:</strong> Chocolate, Açúcar, Manteiga, Ovos, Farinha de Trigo, Creme de Avelã</p>
+    </div>
+    <button class="adicionar" data-id="4" data-nome="Brownie de Nutella" data-preco="28" data-imagem="brownie4.jpeg">Adicionar ao carrinho</button>
+  </div>
+
+ 
+  <div class="brownie-card">
+    <img src="assents/browniecafé.jfif" alt="Brownie de Café">
+    <h3>Café</h3>
+    <div class="informacoes">
+      <p><strong>Ingredientes:</strong> Chocolate, Açúcar, Manteiga, Ovos, Farinha de Trigo, Café Solúvel</p>
+    </div>
+    <button class="adicionar" data-id="5" data-nome="Brownie de Café" data-preco="24" data-imagem="brownie5.jpeg">Adicionar ao carrinho</button>
+  </div>
+
+ 
+  <div class="brownie-card">
+    <img src="assents/brownieístache.jfif" alt="Brownie com Pistache">
+    <h3>Pistache</h3>
+    <div class="informacoes">
+      <p><strong>Ingredientes:</strong> Chocolate, Açúcar, Manteiga, Ovos, Farinha de Trigo, Pistache</p>
+    </div>
+    <button class="adicionar" data-id="6" data-nome="Brownie com Pistache" data-preco="30" data-imagem="brownie6.jpeg">Adicionar ao carrinho</button>
   </div>
 </section>
 
-    <footer>
-        <div class="contato">
-            <p>CONTATO<br>
-            TELEFONE: 09210380830<br>
-            WHATSAPP: (12) 34567-8910<br>
-            EMAIL: DOCERIATENTACAO@GMAIL.COM</p>
-        </div>
-        <div class="direitos">
-            <p>Copyright © Doceria Tentação<br>
-            Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
-
+<footer>
+  <div class="contato">
+    <p>CONTATO<br>
+    TELEFONE: 09210380830<br>
+    WHATSAPP: (12) 34567-8910<br>
+    EMAIL: DOCERIATENTACAO@GMAIL.COM</p>
+  </div>
+  <div class="direitos">
+    <p>Copyright © Doceria Tentação<br>
+    Todos os direitos reservados.</p>
+  </div>
+</footer>

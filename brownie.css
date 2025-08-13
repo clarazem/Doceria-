@@ -15,7 +15,6 @@ main {
     flex-direction: column;
 }
 
-        
 footer {
     background-color: #5D3535;
     text-align: center;
@@ -27,100 +26,125 @@ footer {
 }
 
 .cabecalho {
-  width: 100%;
-  background-color: #fff;
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
 }
 
 .cabecalho .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-h1 {
-      text-align: center;
-      padding-top: 30px;
-      font-size: 32px;
-    }
-
 .logo img {
-  height: 90px;
-  width: auto;
+    height: 90px;
+    width: auto;
 }
 
 .menu ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
 }
 
 .menu li a {
-  text-decoration: none;
-  color: #4b0000;
-  font-weight: bold;
-  font-size: 15px;
-  transition: color 0.3s;
+    text-decoration: none;
+    color: #4b0000;
+    font-weight: bold;
+    font-size: 15px;
+    transition: color 0.3s;
 }
 
 .menu li a:hover {
-  color: #8b0000;
+    color: #8b0000;
 }
 
-.contato-section {
-  padding: 4rem 2rem;
-  background-color: #ffffff;
-  font-family: Arial, sans-serif;
+h1 {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 32px;
+    letter-spacing: 5px;
+    text-shadow:  0 8px 16px rgba(104, 40, 15, 0.548);
 }
 
 .brownies-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  justify-content: center;
-  padding: 40px;
-  max-width: 800px;
-  margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-auto-rows: auto; 
+    gap: 30px;
+    padding: 40px;
+    max-width: 800px; 
+    margin: 0 auto;
 }
 
 .brownie-card {
-  text-align: center;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
 }
 
 .brownie-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 10px;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
 .brownie-card h3 {
-  font-size: 16px;
-  margin: 10px 0;
+    font-size: 16px;
+    margin: 10px 0;
 }
 
 .brownie-card button {
-  padding: 8px 16px;
-  border: 1px solid #000;
-  background: none;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 8px;
+    padding: 8px 16px;
+    border: 1px solid #000;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 8px;
+    position: relative;
+    z-index: 2;
 }
 
 .brownie-card:hover {
-  transform: scale(1.03);
+    transform: scale(1.03);
 }
 
+.informacoes {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.26);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: left;
+    border-radius: 12px;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.brownie-card:hover .informacoes {
+    opacity: 1;
+    visibility: visible;
+}
+
+.informacoes p {
+    font-size: 14px;
+}

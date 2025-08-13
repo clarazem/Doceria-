@@ -1,73 +1,55 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrinho | Doceria</title>
-  </head>
+  <link rel="stylesheet" href="carrinho.css">
+</head>
 <body>
-    <header class="cabecalho">
-  <div class="container">
+  <header class="cabecalho">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="./assents/logo.png" alt="Logo Doce Tentação">
+        </a>
+      </div>
 
-    <div class="logo">
-             <a href="index.html">
-            <img src="./assents/logo.png" alt="Logo Doce Tentação"> 
-            <link rel="stylesheet" href="carinho.css">
-             </a>
-        </div>
-
-    <nav class="menu">
-      <ul>
-         <li><a href="QuemSomos.html">QUEM SOMOS</a></li>
-        <li><a href="Contatos.html">CONTATE-NOS</a></li>
-        <li><a href="MinhaConta.html">MINHA CONTA</a></li>
-        <li><a href="carrinho.html">CARRINHO </a></li>
-       <li><a href="index.html">INÍCIO</a></li>
-
-      </ul>
-    </nav>
-  </div>
-</header>
+      <nav class="menu">
+        <ul>
+          <li><a href="QuemSomos.html">QUEM SOMOS</a></li>
+          <li><a href="Contatos.html">CONTATE-NOS</a></li>
+          <li><a href="MinhaConta.html">MINHA CONTA</a></li>
+          <li><a href="carrinho.html">CARRINHO</a></li>
+          <li><a href="index.html">INÍCIO</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <div class="carrinho">
     <h1>CARRINHO</h1>
 
-    <div class="produto">
-      <img src="brownie.jpg" alt="Brownie Tal">
-      <div class="produto-info">
-        <h2>Brownie Tal</h2>
-      </div>
-      <div class="produto-valores">
-        <span>R$00,00</span>
-        <input type="number" placeholder="0">
-        <span>R$00,00</span>
-      </div>
-    </div>
+    <div id="produtos-carrinho"></div>
 
     <div class="botoes">
       <input type="text" placeholder="Cod cupom">
       <button>Aplicar Cupom</button>
-      <button class="btn-marrom">Atualizar no Carrinho</button>
-      <button>Data da Entrega</button>
-      <button>Período</button>
+      <button class="btn-marrom" id="atualizarCarrinho">Atualizar no Carrinho</button>
     </div>
 
-  
     <div class="total">
       <h2>Total no carrinho</h2>
       <div class="box-total">
-        <p><strong>SUBTOTAL</strong> R$00,00</p>
-        <p><strong>TIPO DE ENTREGA</strong><br>
-          RETIRADA NO LOCAL<br>
-          ENTREGA EM SÃO PAULO
-        </p>
-        <p><strong>TOTAL R$00,00</strong></p>
+        <p><strong>SUBTOTAL</strong> R$ <span id="subtotal">0.00</span></p>
+        <p><strong>TIPO DE ENTREGA</strong><br> RETIRADA NO LOCAL <br> ENTREGA EM SÃO PAULO</p>
+        <p><strong>TOTAL</strong> R$ <span id="total">0.00</span></p>
         <div class="finalizar">
           <button class="btn-finalizar">FINALIZAR</button>
         </div>
       </div>
     </div>
   </div>
-  
+
+  <script src="carrinho.js"></script>
 </body>
 </html>
