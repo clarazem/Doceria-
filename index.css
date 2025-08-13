@@ -28,6 +28,19 @@ body {
   display: block;
 }
 
+.top-image {
+  flex: 1 1 300px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(214, 124, 124, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.top-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(107, 60, 41, 0.562);
+}
+
 .cabecalho {
   width: 100%;
   background-color: #fff;
@@ -132,10 +145,9 @@ h1 {
 .produto img:hover {
     transform: scale(1.05); 
 }
-
 .mostruario {
   display: flex;
-  gap: 100px;
+  gap: 50px;
   justify-content: center;
   flex-wrap: wrap;
   padding: 2rem 1rem;
@@ -146,7 +158,7 @@ h1 {
   flex: 1 1 300px;
   max-width: 400px;
   background: #fff;
-  border: 2px solid #491f1f; 
+  border: 3px solid #491f1f; 
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(214, 124, 124, 0.3);
   overflow: hidden;
@@ -195,6 +207,7 @@ h1 {
 
 .teste {
     padding: 30px;
+    background-color:#5D3535
 }
 
 .onda-section {
@@ -237,6 +250,7 @@ h1 {
   line-height: 1.5;
 }
 
+
 .onda {
   position: absolute;
   bottom: 0;
@@ -263,6 +277,31 @@ h1 {
     cursor: pointer;
 }
 
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px; 
+  z-index: 9999; 
+}
+
+.whatsapp-icon img {
+  width: 50px; 
+  height: 50px;
+}
+
+
+.instagram-icon {
+  position: fixed;
+  bottom: 80px; 
+  right: 20px;  
+  z-index: 9999;
+}
+
+.instagram-icon img {
+  width: 50px;
+  height: 50px;
+}
+
 footer {
     background-color: #5D3535;
     text-align: center;
@@ -274,6 +313,13 @@ footer {
     margin: 0.5rem 0;
 }
 
+
+.linha10 {
+    margin-top: 10rem;
+    padding: 10;
+    text-align: center;
+    background-color:#491f1f;
+}
 
 .linha1 {
     margin-top: 2rem;
