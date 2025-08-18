@@ -154,6 +154,26 @@ footer {
       color: #a50013;
     }
 
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.form-box {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 30px;
+  width: 350px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#account-panel .form-box {
+  max-width: 500px;
+}
+
     @media (max-width: 800px) {
       
       .container {

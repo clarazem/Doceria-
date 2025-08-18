@@ -1,0 +1,11 @@
+document.getElementById('contato-form').addEventListener('submit', function(event){
+  event.preventDefault();
+
+  emailjs.sendForm('SEU_SERVICE_ID', 'SEU_TEMPLATE_ID', this)
+    .then(function(){
+      alert("Mensagem enviada com sucesso!");
+      document.getElementById('contato-form').reset();
+    }, function(error){
+      alert("Erro ao enviar: " + JSON.stringify(error));
+    });
+});

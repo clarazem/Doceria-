@@ -1,60 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contate-nos</title>
+  <link rel="stylesheet" href="contatos.css">
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init("SEU_USER_ID_DO_EMAILJS"); // substitua pelo seu User ID do EmailJS
+    })();
+  </script>
+</head>
+<body>
+  <!-- Cabeçalho -->
   <header class="cabecalho">
-  <div class="container">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="./assents/logo.png" alt="Logo Doce Tentação">
+        </a>
+      </div>
 
-    <div class="logo">
-             <a href="index.html">
-            <img src="./assents/logo.png" alt="Logo Doce Tentação"> 
-             <link rel="stylesheet" href="contatos.css">
-             </a>
-        </div>
-    <nav class="menu">
-      <ul>
-         <li><a href="QuemSomos.html">QUEM SOMOS</a></li>
-        <li><a href="Contatos.html">CONTATE-NOS</a></li>
-        <li><a href="MinhaConta.html">MINHA CONTA</a></li>
-         <div id="carrinho-icon">
-  🛒 <span id="contador">0</span>
-</div>
-        <li><a href="carrinho.html">CARRINHO </a></li>
-       <li><a href="index.html">INÍCIO</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<h1>CONTATE-NOS</h1>
-<section class="contato-section">
-  <div class="contato-container">
-    <form class="form-contato">
-      <label for="nome">Nome</label>
-      <input type="text" id="nome" name="nome" placeholder="Nome" required>
-
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Email" required>
-
-      <label for="mensagem">Mensagem</label>
-      <textarea id="mensagem" name="mensagem" placeholder="Escreva aqui " rows="5" required></textarea>
-
-      <button type="submit">Enviar</button>
-    </form>
-
-    <div class="info-contato">
-      <p><strong>Rua Fulano de tal </strong> – Bairro Ciclano – São Paulo</p>
-      <p>(01) 12345-6789 / (01) 1245-5678</p>
-      <p><a href="docetentaçao@gmail.com.br">docetentação@gmail.com.br</a></p>
+      <nav class="menu">
+        <ul>
+          <li><a href="QuemSomos.html">QUEM SOMOS</a></li>
+          <li><a href="Contatos.html">CONTATE-NOS</a></li>
+          <li><a href="MinhaConta.html">MINHA CONTA</a></li>
+          <div id="carrinho-icon">🛒 <span id="contador">0</span></div>
+          <li><a href="carrinho.html">CARRINHO</a></li>
+          <li><a href="index.html">INÍCIO</a></li>
+        </ul>
+        
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-    <footer>
-        <div class="contato">
-            <p>CONTATO<br>
-            TELEFONE: 09210380830<br>
-            WHATSAPP: (12) 34567-8910<br>
-            EMAIL: DOCERIATENTACAO@GMAIL.COM</p>
-        </div>
-        <div class="direitos">
-            <p>Copyright © Doceria Tentação<br>
-            Todos os direitos reservados.</p>
-        </div>
-    </footer>
+  <h1>CONTATE-NOS</h1>
+
+  <section class="contato-section">
+    <div class="contato-container">
+      <form class="form-contato" id="contato-form">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="from_name" placeholder="Nome" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="from_email" placeholder="Email" required>
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="message" placeholder="Escreva aqui" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <div class="info-contato">
+        <p><strong>Rua Fulano de Tal</strong> – Bairro Ciclano – São Paulo</p>
+        <p>(01) 12345-6789 / (01) 1245-5678</p>
+        <p><a href="mailto:docetentacao@gmail.com">docetentacao@gmail.com</a></p>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="contato">
+      <p>CONTATO<br>
+      TELEFONE: 09210380830<br>
+      WHATSAPP: (12) 34567-8910<br>
+      EMAIL: DOCERIATENTACAO@GMAIL.COM</p>
+    </div>
+    <div class="direitos">
+      <p>Copyright © Doceria Tentação<br>
+      Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('contato-form').addEventListener('submit', function(event){
+      event.preventDefault();
+      emailjs.sendForm('service_ytlon5b' this)
+        .then(function(){
+          alert("Mensagem enviada com sucesso!");
+          document.getElementById('contato-form').reset();
+        }, function(error){
+          alert("Erro ao enviar: " + JSON.stringify(error));
+        });
+    });
+  </script>
+</body>
+</html>

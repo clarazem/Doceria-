@@ -1,41 +1,48 @@
-
-
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Minha Conta</title>
- <header class="cabecalho">
-  <div class="container">
-
-    <div class="logo">
-             <a href="index.html">
-            <img src="./assents/logo.png" alt="Logo Doce Tentação"> 
-            <link rel="stylesheet" href="minhaconta.css">
-             </a>
-        </div>
-
-    <nav class="menu">
-      <ul>
-         <li><a href="QuemSomos.html">QUEM SOMOS</a></li>
-        <li><a href="Contatos.html">CONTATE-NOS</a></li>
-        <li><a href="MinhaConta.html">MINHA CONTA</a></li>
-         <div id="carrinho-icon">
-  🛒 <span id="contador">0</span>
-</div>
-        <li><a href="carrinho.html">CARRINHO </a></li>
-       <li><a href="index.html">INÍCIO</a></li>
-    </nav>
-  </div>
-</header>
+  <link rel="stylesheet" href="minhaconta.css">
 </head>
 <body>
+  <!-- Cabeçalho -->
+  <header class="cabecalho">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="./assents/logo.png" alt="Logo Doce Tentação">
+        </a>
+      </div>
+
+      <nav class="menu">
+        <ul>
+                <li><a href="QuemSomos.html">QUEM SOMOS</a></li>
+                <li><a href="Contatos.html">CONTATE-NOS</a></li>
+                <li><a href="MinhaConta.html">MINHA CONTA</a></li>
+                <div id="carrinho-icon"> 🛒 <span id="contador">0</span></div>
+                <li><a href="carrinho.html">CARRINHO</a></li>
+                <li><a href="index.html">INÍCIO</a></li>
+        </ul>
+    
+        </div>
+      </nav>
+    </div>
+  </header>
+
   <h1>MINHA CONTA</h1>
 
-  <div class="container">
-    <div class="form-box">
+  <!-- Contêiner de autenticação (login e cadastro) -->
+  <div class="container" id="auth-container">
+    <!-- Login -->
+    <div class="form-box" id="login-box">
       <h2>ENTRAR</h2>
-      <form>
-        <label for="username">Nome de usuário ou e-mail </label>
+      <form id="login-form">
+        <label for="username">Nome de usuário ou e-mail</label>
         <input type="text" id="username" required>
 
-        <label for="password">Senha </label>
+        <label for="password">Senha</label>
         <input type="password" id="password" required>
 
         <div class="checkbox-label">
@@ -48,38 +55,55 @@
       </form>
     </div>
 
-    <div class="form-box">
+    <!-- Cadastro -->
+    <div class="form-box" id="register-box">
       <h2>CADASTRE-SE</h2>
-      <form>
-        <label for="email">Endereço de e-mail </label>
+      <form id="register-form">
+        <label for="name">Nome completo</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Endereço de e-mail</label>
         <input type="email" id="email" required>
 
-        <p>Um link para definir uma nova senha será enviado para seu endereço de e-mail.</p>
-
-        <p class="privacy">
-          Seus dados pessoais serão usados para aprimorar a sua experiência em todo este site,
-          para gerenciar o acesso a sua conta e para outros propósitos, como descritos em nossa
-          <a href="#">política de privacidade</a>.
-        </p>
+        <label for="password-register">Senha</label>
+        <input type="password" id="password-register" required>
 
         <button type="submit">Cadastre-se</button>
       </form>
+      <p class="privacy">
+        Seus dados pessoais serão usados para aprimorar a sua experiência em todo este site,
+        para gerenciar o acesso a sua conta e para outros propósitos, como descritos em nossa
+        <a href="#">política de privacidade</a>.
+      </p>
     </div>
   </div>
-  
-    <footer>
-        <div class="contato">
-            <p>CONTATO<br>
-            TELEFONE: 09210380830<br>
-            WHATSAPP: (12) 34567-8910<br>
-            EMAIL: DOCERIATENTACAO@GMAIL.COM</p>
-        </div>
-        <div class="direitos">
-            <p>Copyright © Doceria Tentação<br>
-            Todos os direitos reservados.</p>
-        </div>
-    </footer>
-    
-</body>
 
-  
+  <!-- Painel da conta -->
+  <div class="container" id="account-panel" style="display:none;">
+    <div class="form-box">
+      <h2>Bem-vindo, <span id="user-name"></span></h2>
+      <button onclick="logout()">Sair da Conta</button>
+      <h3>Compras realizadas:</h3>
+      <ul id="purchase-history"></ul>
+      <h3>Pagamentos:</h3>
+      <ul id="payments-history"></ul>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="contato">
+      <p>CONTATO<br>
+      TELEFONE: 09210380830<br>
+      WHATSAPP: (12) 34567-8910<br>
+      EMAIL: DOCERIATENTACAO@GMAIL.COM</p>
+    </div>
+    <div class="direitos">
+      <p>Copyright © Doceria Tentação<br>
+      Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="minhaconta.js"></script>
+</body>
+</html>
