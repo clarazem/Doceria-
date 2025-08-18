@@ -185,3 +185,24 @@ button, input[type="text"] {
     text-align: center;
   }
 }
+
+.modal-botoes {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+#cancelar-pagamento {
+  background: #b94e4e;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#cancelar-pagamento:hover {
+  background: #923c3c;
+}
+

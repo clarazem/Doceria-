@@ -1,6 +1,5 @@
 function adicionarCarrinho(nome, preco, imagem) {
   let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-  // Inicializar quantidade como 1
   carrinho.push({ nome, preco, imagem, quantidade: 1 });
   localStorage.setItem("carrinho", JSON.stringify(carrinho));
   atualizarContadorCarrinho();
@@ -20,7 +19,6 @@ function renderCarrinho() {
   let total = 0;
 
   carrinho.forEach((item, index) => {
-    // Calcular subtotal do item
     const subtotalItem = item.preco * item.quantidade;
     total += subtotalItem;
 
@@ -55,9 +53,11 @@ function removerItem(index) {
 }
 
 function limparCarrinho() {
-  localStorage.removeItem("carrinho");
-  renderCarrinho();
-  atualizarContadorCarrinho();
+  if(confirm("Deseja realmente limpar o carrinho?")){
+    localStorage.removeItem("carrinho");
+    renderCarrinho();
+    atualizarContadorCarrinho();
+  }
 }
 
 function atualizarContadorCarrinho() {
@@ -73,6 +73,19 @@ function atualizarQuantidade(index, novaQuantidade) {
   renderCarrinho();
 }
 
+function finalizarCompra() {
+  let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+  if(carrinho.length === 0){
+    alert("O carrinho está vazio!");
+    return;
+  }
+  // Aqui você pode adicionar integração com pagamento real ou checkout
+  alert("Compra finalizada com sucesso!\nTotal: R$ " + carrinho.reduce((acc, item) => acc + item.preco * item.quantidade, 0).toFixed(2));
+  localStorage.removeItem("carrinho");
+  renderCarrinho();
+  atualizarContadorCarrinho();
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".adicionar").forEach(botao => {
     botao.addEventListener("click", () => {
@@ -84,6 +97,50 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const btnFinalizar = document.querySelector(".btn-finalizar");
+  if(btnFinalizar) btnFinalizar.addEventListener("click", finalizarCompra);
+
   atualizarContadorCarrinho();
   renderCarrinho();
 });
+// Função para gerar QR Code PIX (simulação)
+function gerarPix(valorTotal) {
+  const chavePix = "123e4567-e89b-12d3-a456-426614174000"; // sua chave PIX de teste
+  const qrCodeURL = `https://api.qrserver.com/v1/create-qr-code/?data=PIX%20CHAVE:${chavePix}%20VALOR:${valorTotal.toFixed(2)}&size=150x150`;
+  return { chavePix, qrCodeURL };
+}
+function finalizarCompra() {
+  let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+  if (carrinho.length === 0) {
+    alert("Seu carrinho está vazio!");
+    return;
+  }
+
+  const total = carrinho.reduce((sum, item) => sum + item.preco * item.quantidade, 0);
+  const chavePix = "123e4567-e89b-12d3-a456-426614174000";
+  const qrCodeURL = `https://api.qrserver.com/v1/create-qr-code/?data=PIX%20CHAVE:${chavePix}%20VALOR:${total.toFixed(2)}&size=150x150`;
+
+  // Preencher modal
+  document.getElementById("valor-total-pix").textContent = total.toFixed(2);
+  document.getElementById("chave-pix").textContent = chavePix;
+  document.getElementById("qrcode-pix").src = qrCodeURL;
+
+  const modal = document.getElementById("modal-pix");
+  modal.style.display = "flex";
+
+  // Fechar modal ao clicar no X
+  modal.querySelector(".fechar").onclick = () => modal.style.display = "none";
+
+  // Cancelar pagamento
+  document.getElementById("cancelar-pagamento").onclick = () => modal.style.display = "none";
+
+  // Confirmar pagamento
+  document.getElementById("confirmar-pagamento").onclick = () => {
+    registrarCompra(carrinho, total); // Registra no histórico do usuário
+    localStorage.removeItem("carrinho");
+    renderCarrinho();
+    atualizarContadorCarrinho();
+    modal.style.display = "none";
+    alert("Pagamento confirmado! Compra registrada com sucesso.");
+  };
+}

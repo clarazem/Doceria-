@@ -8,7 +8,7 @@
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script type="text/javascript">
     (function(){
-      emailjs.init("SEU_USER_ID_DO_EMAILJS"); // substitua pelo seu User ID do EmailJS
+      emailjs.init("service_ytlon5b"); // substitua pelo seu User ID do EmailJS
     })();
   </script>
 </head>
@@ -74,18 +74,6 @@
       Todos os direitos reservados.</p>
     </div>
   </footer>
-
-  <script>
-    document.getElementById('contato-form').addEventListener('submit', function(event){
-      event.preventDefault();
-      emailjs.sendForm('service_ytlon5b' this)
-        .then(function(){
-          alert("Mensagem enviada com sucesso!");
-          document.getElementById('contato-form').reset();
-        }, function(error){
-          alert("Erro ao enviar: " + JSON.stringify(error));
-        });
-    });
-  </script>
+<script src="contato,js"></script>
 </body>
 </html>

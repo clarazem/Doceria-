@@ -30,6 +30,22 @@
 
 <div class="carrinho">
   <div id="produtos-carrinho"></div>
+  
+<!-- Modal de Pagamento PIX -->
+<div id="modal-pix" class="modal-pix" style="display:none;">
+  <div class="modal-content">
+    <span class="fechar">&times;</span>
+    <h2>Pagamento via PIX</h2>
+    <p>Total: R$ <span id="valor-total-pix">0.00</span></p>
+    <img id="qrcode-pix" src="" alt="QR Code PIX">
+    <p>Chave PIX: <strong id="chave-pix">123e4567-e89b-12d3-a456-426614174000</strong></p>
+    <div class="modal-botoes">
+      <button id="confirmar-pagamento">Confirmar Pagamento</button>
+      <button id="cancelar-pagamento">Cancelar</button>
+    </div>
+  </div>
+</div>
+
   <div class="total">
     <h2>Total no carrinho</h2>
     <div class="box-total">
