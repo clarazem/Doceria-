@@ -1,3 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+}
+
+body {
+  background: #fff;
+  padding: 2rem;
+  color: #2c1a1a;
+}
 
 .cabecalho {
   width: 100%;
@@ -39,132 +51,135 @@
 .menu li a:hover {
   color: #BF7D7D;
 }
- 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Georgia', serif;
-    }
 
-    body {
-      background: #fff;
-      padding: 2rem;
-      color: #2c1a1a;
-    }
+.carrinho {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
 
-    h1 {
-      text-align: center;
-      padding-top: 30px;
-      font-size: 32px;
-    }
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-    .carrinho {
-      max-width: 900px;
-      margin: auto;
-    }
+.produto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ccc;
+}
 
-    .produto {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid #ccc;
-      padding: 1rem 0;
-    }
+.produto img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 4px;
+}
 
-    .produto img {
-      width: 80px;
-      height: 80px;
-      object-fit: cover;
-      border-radius: 4px;
-    }
+.produto-info {
+  flex: 1;
+  margin-left: 1rem;
+}
 
-    .produto-info {
-      flex: 1;
-      margin-left: 1rem;
-    }
+.produto-info h2 {
+  font-size: 1rem;
+  color: #5e2d2d;
+}
 
-    .produto-info h2 {
-      font-size: 1rem;
-      color: #5e2d2d;
-    }
+.produto-valores {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
-    .produto-valores {
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
-    }
+.produto-valores input {
+  width: 50px;
+  text-align: center;
+  padding: 0.3rem;
+}
 
-    .produto-valores input {
-      width: 60px;
-      text-align: center;
-      padding: 0.3rem;
-    }
+.produto-valores button {
+  background: #d46a6a;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
-    .botoes {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 1.5rem;
-      justify-content: center;
-    }
+.produto-valores button:hover {
+  background: #b94e4e;
+}
 
-    button, input[type="text"] {
-      padding: 0.7rem 1.2rem;
-      border: 1px solid #999;
-      background: white;
-      color: #2c1a1a;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 0.9rem;
-    }
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
 
-    .btn-marrom {
-      background: #7b5a56;
-      color: white;
-      border: none;
-    }
+button, input[type="text"] {
+  padding: 0.7rem 1.2rem;
+  border: 1px solid #999;
+  background: white;
+  color: #2c1a1a;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
 
-    .total {
-      margin-top: 3rem;
-      font-size: 1.2rem;
-    }
+.btn-marrom {
+  background: #7b5a56;
+  color: white;
+  border: none;
+}
 
-    .box-total {
-      border: 1px solid #ccc;
-      padding: 1rem;
-      border-radius: 10px;
-      margin-top: 1rem;
-    }
+.total {
+  margin-top: 3rem;
+  font-size: 1.2rem;
+}
 
-    .box-total p {
-      margin: 0.5rem 0;
-    }
+.box-total {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
 
-    .finalizar {
-      margin-top: 1rem;
-      text-align: right;
-    }
+.box-total p {
+  margin: 0.5rem 0;
+}
 
-    .btn-finalizar {
-      background: #5c3c38;
-      color: white;
-      padding: 0.7rem 2rem;
-      border-radius: 6px;
-      border: none;
-      cursor: pointer;
-    }
+.finalizar {
+  margin-top: 1rem;
+  text-align: right;
+}
 
-    @media (max-width: 600px) {
-      .produto {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .produto-valores {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .finalizar {
-        text-align: center;
-      }
-    }
+.btn-finalizar {
+  background: #5c3c38;
+  color: white;
+  padding: 0.7rem 2rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .produto {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .produto-valores {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .finalizar {
+    text-align: center;
+  }
+}

@@ -1,4 +1,3 @@
-// produto.js
 
 // Obtém todos os botões de "Adicionar ao Carrinho"
 const botoesAdicionar = document.querySelectorAll('.adicionar');
