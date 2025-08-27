@@ -98,7 +98,7 @@ h1 {
       padding-top: 30px;
       font-size: 32px;
       letter-spacing: 5px;
-      text-shadow:  0 8px 16px rgba(104, 40, 15, 0.548);
+      text-shadow:  0 8px 16px rgba(0, 0, 0, 0.39);
     }
 
 .produtos-destaque {
@@ -208,17 +208,17 @@ h1 {
 
 .teste {
     padding: 30px;
-    background-color:#5D3535
+    background-color:#4B261D
 }
 
 .onda-section {
   position: relative;
-  background-color: #5D3535;
+  background-color: #4B261D;
   color: rgb(0, 0, 0);
   text-align: center;
   padding: 100px 20px 60px;
   overflow: hidden;
-   background: linear-gradient(to bottom, #5D3535, #f8e8e8, white);
+   background: linear-gradient(to bottom, #4B261D, #f8e8e8, white);
   
 }
 
@@ -304,7 +304,7 @@ h1 {
 }
 
 footer {
-    background-color: #5D3535;
+    background-color: #4B261D;
     text-align: center;
     padding: 2rem;
     color: #FFFF;
