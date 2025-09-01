@@ -100,52 +100,74 @@ h1 {
       letter-spacing: 5px;
       text-shadow:  0 8px 16px rgba(0, 0, 0, 0.39);
     }
-
+/* ================== PRODUTOS DESTAQUE ================== */
 .produtos-destaque {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 4rem;
-    background-color: #ffffff;
-    padding: 5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+  background-color: #ffffff;
+  padding: 5rem;
 }
 
 .produtos-destaque a {
-    text-decoration: none;
-    color: rgb(66, 26, 26);
-    font-weight: bold;
-    display: block;
-    transition: transform 0.3s ease; 
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
-.produtos-destaque a:hover {
-    transform: scale(1.05); 
+/* NOVO CARD */
+.card {
+  position: relative;
+  width: 250px;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-.produto {
-    border-radius: 20px;
-    padding: 1rem;
-    text-align: center;
-    width: 200px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-    color: #2f0e0e;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
 }
 
-.produto img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    object-fit: contain;
-    background: linear-gradient(to bottom, #000000);
-    transition: transform 0.3s ease;
+/* Imagem do produto */
+.card img {
+  width: 250px;
+  height: 400px;
+  object-fit: cover;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
-.produto img:hover {
-    transform: scale(1.05); 
+.card:hover img {
+  opacity: 0.7;
+  transform: scale(1.05);
 }
+.card h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centraliza no meio */
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  color: #ffffff; /* cor clara para destacar */
+  font-size: 2rem; /* tamanho considerável */
+  font-family: 'Marcellus SC', serif;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  background:  #491f1f5d; ; /* fundo suave para contraste */
+  border-radius: 12px;
+}
+
+/* Mostrar nome ao passar o mouse */
+.card:hover h3 {
+  opacity: 1;
+}
+
 .mostruario {
   display: flex;
   gap: 50px;
