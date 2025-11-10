@@ -8,7 +8,9 @@
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script type="text/javascript">
     (function(){
-      emailjs.init("service_ytlon5b"); // substitua pelo seu User ID do Email
+      emailjs.init({
+  publicKey: "q4j1pFvw0tVq9E4jp"
+}); 
     })();
   </script>
 </head>
@@ -42,16 +44,17 @@
     <div class="contato-container">
       <form class="form-contato" id="contato-form">
         <label for="nome">Nome</label>
-        <input type="text" id="nome" name="from_name" placeholder="Nome" required>
-
+        <input type="text" id="nome" name="name" placeholder="Nome" required>
+      
         <label for="email">Email</label>
-        <input type="email" id="email" name="from_email" placeholder="Email" required>
-
+        <input type="email" id="email" name="email" placeholder="Email" required>
+      
         <label for="mensagem">Mensagem</label>
         <textarea id="mensagem" name="message" placeholder="Escreva aqui" rows="5" required></textarea>
-
+      
         <button type="submit">Enviar</button>
       </form>
+      
 
       <div class="info-contato">
         <p><strong>Rua Fulano de Tal</strong> – Bairro Ciclano – São Paulo</p>

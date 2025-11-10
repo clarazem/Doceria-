@@ -1,11 +1,12 @@
-document.getElementById('contato-form').addEventListener('submit', function(event){
+document.getElementById('contato-form').addEventListener('submit', function(event) {
   event.preventDefault();
 
-  emailjs.sendForm('SEU_SERVICE_ID', 'SEU_TEMPLATE_ID', this)
-    .then(function(){
-      alert("Mensagem enviada com sucesso!");
+  emailjs.sendForm('service_ytlon5b', 'template_y8n5dpm', this, 'q4j1pFvw0tVq9E4jp')
+    .then(function() {
+      alert('Mensagem enviada com sucesso! 🍰');
       document.getElementById('contato-form').reset();
-    }, function(error){
-      alert("Erro ao enviar: " + JSON.stringify(error));
+    }, function(error) {
+      alert('Erro ao enviar mensagem 😞');
+      console.error('Erro:', error);
     });
 });
