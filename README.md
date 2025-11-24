@@ -13,3 +13,4 @@ Este projeto foi feito com HTML, CSS e JavaScript, e em breve contará com integ
 💻 Servidor Django para gerenciar as rotas da aplicação
 
 Desenvolvido por Clara Zem 💖 — 2025
+https://github.com/clarazem/Doceria-/blob/main/loja/html/index.html
