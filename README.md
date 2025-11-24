@@ -12,5 +12,7 @@ Este projeto foi feito com HTML, CSS e JavaScript, e em breve contará com integ
 💾 Integração futura com banco de dados MySQL
 💻 Servidor Node.js para gerenciar as rotas da aplicação
 
+https://clarazem.github.io/Doceria-/index.html
+
 Desenvolvido por Clara Zem 💖 — 2025
 
